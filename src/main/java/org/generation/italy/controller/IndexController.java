@@ -1,5 +1,7 @@
 package org.generation.italy.controller;
 
+import java.util.Arrays;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,5 +20,17 @@ public class IndexController {
 		model.addAttribute("namee", name);
 		return "index";
 	}
+	
+	
+	@GetMapping("/movies")
+	public String movies(Model model) {
+
+		model.addAttribute("movies", Arrays.asList("Don't look up", "Free guy", "Army of the dead"));
+		return "movies";
+	}
+	
+
 
 }
+
+

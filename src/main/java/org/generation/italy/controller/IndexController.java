@@ -29,6 +29,12 @@ public class IndexController {
 		return "movies";
 	}
 	
+	@GetMapping("/songs")
+	public String songs (Model model) {
+		
+		model.addAttribute("songs", Arrays.asList("La mente vola- Alphataurus", "Straight Outta Compton- N.W.A.", "Yr body is nothing - Boy Harsher"));
+		return "songs";
+	}
 
 
 }

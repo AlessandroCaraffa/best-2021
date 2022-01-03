@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Movies</title>
+	</head>
+		<body>
+			<ul>
+				<li th:each="song : ${songs} " th:text="${song}">
+					
+				</li>
+			</ul>
+			<a th:href="@{''}" th:text="home"></a>
+		</body>
+</html>
